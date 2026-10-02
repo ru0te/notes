@@ -20,5 +20,6 @@
       "important": true,
       "id": "9ZiYzjk8ROI"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

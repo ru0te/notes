@@ -13,11 +13,11 @@ function App() {
   }, []);
 
   function handleAddNewNote() {
-    const newNote = {
+    const newData = {
       content: newNote,
       important: Math.random() < 0.5,
     };
-    noteService.create(newNote).then((res) => {
+    noteService.create(newData).then((res) => {
       setNotes((prevNotes) => [...prevNotes, res.data]);
       setNewNote('');
     });
@@ -45,7 +45,7 @@ function App() {
   }
 
   return (
-    <>
+    <div className='container'>
       <h1>Notes</h1>
       <ul>
         {notes.map((note) => (
@@ -64,7 +64,7 @@ function App() {
         <br />
         <button onClick={handleAddNewNote}>add new note</button>
       </div>
-    </>
+    </div>
   );
 }
 
